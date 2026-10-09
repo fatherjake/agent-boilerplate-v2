@@ -1,35 +1,42 @@
-# Agent setup
+# <Project name>
 
-Everything shared lives in `.agents/`. Other tools point at it.
+<One or two lines: what this project is and who uses it. Fill in when you copy this boilerplate.>
 
-## Layout
+## Commands
 
-```
-.agents/
-  mcp.json        the one MCP server list
-  metl/           (placeholder)
-  skills/
-    saiyan/       front door: playbooks/ and principals/
-    task-create/  turn a goal into a written plan
-    task-execute/ run the plan unit by unit
-    task-progress/ decisions, progress, what's left
-    typescript/   TS rules, applies to .ts and .tsx
-    bruh/         restate the last message in plain language (manual only)
-    verify-create/ generate a verify-<app> skill for a project
-    verify-example/ template: SKILL.md, features/, reference/, scripts/
-.cursor/mcp.json  -> ../.agents/mcp.json
-.codex/mcp.json   -> ../.agents/mcp.json
-```
+Fill these in. Agents run them without asking.
 
-## How work flows
+- Install: `<command>`
+- Run locally: `<command>`
+- Test: `<command>`
+- Lint, format, and typecheck: `<command>`
 
-1. Real engineering work starts with `saiyan`, which picks a playbook.
-2. Bigger work: `task-create` writes `.agents/tasks/<slug>/plan.md`, then `task-execute` runs it, logging with `task-progress`.
-3. Every project gets a `verify-<app>` skill, made with `verify-create`, so agents can prove behavior on the real app.
-4. If you write the same correction twice, fix it in structure (a script, a lint rule, a check), not another paragraph here.
+Docs live in `<path>`. Start there before answering questions about the project.
 
-## Notes
+## How to work
 
-- Skills live in `.agents/skills/`, which Cursor and Codex read. Claude Code reads `.claude/skills/`, so add `ln -s ../.agents/skills .claude/skills` if you use it.
-- Cursor reads MCP servers from `.cursor/mcp.json`. Codex reads `.codex/config.toml`, not `.codex/mcp.json`. See the README.
-- Keep skill names unique across the repo and your global skills. Cursor does not document which one wins on a clash.
+- Real engineering work (a bug, a feature, a refactor, an investigation, a long run) starts with the `saiyan` skill. It picks a playbook and applies the principals.
+- Work big enough for a written plan or several PRs: `task-create` writes the plan, `task-execute` runs it, and `task-progress` records decisions and what's left.
+- Do not use any of them for questions, discussion, or one-off small edits.
+- Before saying done, verify on the real thing with this project's `verify-*` skill. If the project has none, run `verify-create` first. "It compiles" is not verification.
+- Reproduce a bug before fixing it, and verify on the same surface.
+
+## Git
+
+- Work on a branch named for the task. Do not commit to `main` unless asked.
+- Commit small, ordered changes with messages in this repo's style.
+- Stage explicit paths. Never `git add -A`, because other agents may share the tree.
+- Never force-push a shared branch, merge, or deploy unless asked.
+- Only push when the user asks you to.
+
+## Always pause for
+
+Irreversible actions: deploys, deleting data, force-pushes, messages to customers, spending money. Everything reversible, just do it.
+
+## Secrets
+
+Never commit secrets and never print them in replies or logs. Name the environment variable or secret store instead.
+
+## Keeping this file useful
+
+Every agent reads this file every session, so keep it short. If you correct the same mistake twice, fix it in structure (a script, a lint rule, a check) rather than adding a paragraph here. Setup details such as symlinks and where tools read config are in `README.md`.
