@@ -9,7 +9,6 @@ Copy `.agents/`, `.cursor/`, `.codex/`, `AGENTS.md`, `NOTICE.md` and `.gitignore
 ```
 .agents/
   mcp.json         the one MCP server list
-  metl/            mission essential task list: what must always work
   skills/          saiyan, task-create, task-execute, task-progress, typescript, bruh, verify-create, verify-example
 .cursor/mcp.json   -> ../.agents/mcp.json
 .codex/mcp.json    -> ../.agents/mcp.json
@@ -28,4 +27,3 @@ CLAUDE.md          pointer for Claude Code
 - `.codex/mcp.json` is a symlink as requested, but Codex documents `.codex/config.toml` (TOML) for project MCP servers. Generate that file from `.agents/mcp.json`, or Codex will not see the servers.
 - `.agents/mcp.json` is not a documented path in Cursor or Codex. It is only the source file the symlinks point at.
 - Symlinked MCP files and nested skills have not been tested with Cursor cloud agents.
-- `.agents/metl/` is empty until its purpose is decided.
