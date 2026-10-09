@@ -19,6 +19,7 @@ Docs live in `<path>`. Start there before answering questions about the project.
 - Work big enough for a written plan or several PRs: `task-create` writes the plan, `task-execute` runs it, and `task-progress` records decisions and what's left.
 - Do not use any of them for questions, discussion, or one-off small edits.
 - Before saying done, verify on the real thing with this project's `verify-*` skill. If the project has none, run `verify-create` first. "It compiles" is not verification.
+- `.agents/metl/tasks.md` is the mission essential task list: what must always work. Check your change does not break any of it, and keep it current.
 - Reproduce a bug before fixing it, and verify on the same surface.
 
 ## Git

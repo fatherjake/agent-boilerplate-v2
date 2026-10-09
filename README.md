@@ -9,7 +9,7 @@ Copy `.agents/`, `.cursor/`, `.codex/`, `AGENTS.md`, `NOTICE.md` and `.gitignore
 ```
 .agents/
   mcp.json         the one MCP server list
-  metl/            placeholder
+  metl/            mission essential task list: what must always work
   skills/          saiyan, task-create, task-execute, task-progress, typescript, bruh, verify-create, verify-example
 .cursor/mcp.json   -> ../.agents/mcp.json
 .codex/mcp.json    -> ../.agents/mcp.json
