@@ -4,6 +4,7 @@ Several files here are adapted from pstack by Lauren Tan, MIT licensed:
 https://github.com/cursor/plugins/tree/main/pstack
 
 - `.agents/skills/saiyan/principals/*.md` (from the `principle-*` skills)
+- `.agents/skills/bruh/` (from `bro`)
 - `.agents/skills/typescript/` (from `typescript-best-practices`)
 - `.agents/skills/verify-create/` (from `create-verification-skill`)
 - `.agents/skills/task-progress/` (from `show-me-your-work`)

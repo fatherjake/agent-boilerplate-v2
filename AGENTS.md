@@ -14,6 +14,7 @@ Everything shared lives in `.agents/`. Other tools point at it.
     task-execute/ run the plan unit by unit
     task-progress/ decisions, progress, what's left
     typescript/   TS rules, applies to .ts and .tsx
+    bruh/         restate the last message in plain language (manual only)
     verify-create/ generate a verify-<app> skill for a project
     verify-example/ template: SKILL.md, features/, reference/, scripts/
 .cursor/mcp.json  -> ../.agents/mcp.json
