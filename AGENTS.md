@@ -17,6 +17,7 @@ Docs live in `<path>`. Start there before answering questions about the project.
 
 - Real engineering work (a bug, a feature, a refactor, an investigation, a long run) starts with the `saiyan` skill. It picks a playbook and applies the principals.
 - Work big enough for a written plan or several PRs: `task-create` writes the plan, `task-execute` runs it, and `task-progress` records decisions and what's left.
+- When a task finishes, `task-review` writes a short report on which skills fired, which should have, and what to fix. A nightly `review-sweep` reads those reports, fixes the skills and deletes finished task folders.
 - Do not use any of them for questions, discussion, or one-off small edits.
 - Before saying done, verify on the real thing with this project's `verify-*` skill. If the project has none, run `verify-create` first. "It compiles" is not verification.
 - Reproduce a bug before fixing it, and verify on the same surface.

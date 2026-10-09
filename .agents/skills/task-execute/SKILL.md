@@ -35,7 +35,8 @@ For each unit, in order:
 1. Run the exit condition itself, not a proxy (`saiyan/principals/prove-it-works.md`). Paste the output.
 2. Run `saiyan/playbooks/ship.md` for the pull request.
 3. Set `status: complete` and a final `task-progress` row. Note what is left that you could not verify.
-4. Reply with the exit condition result, the PR, and what is open.
+4. Run `task-review`, commit its report on the same branch, and push it to the open PR.
+5. Reply with the exit condition result, the PR, and what is open.
 
 ## When something breaks the plan
 
